@@ -1,0 +1,17 @@
+-- To create sample data, you can use these queries from a production or beta database backup:
+--
+-- delete FROM `users` where id > 10 and id!=1;
+-- delete FROM `addresses` WHERE user_id > 10;
+-- delete FROM `announcements` WHERE user_id > 10;
+-- delete FROM `announcements_pro` WHERE user_id > 10;
+-- delete from `contacts` where user_id_1 > 10 or user_id_2 > 10;
+-- delete from `contact_requests` where user_id_to > 10 or user_id_from > 10;
+-- delete `announcement_reservations` from announcement_reservations left join announcements on announcements.id = announcement_reservations.announcement_id where announcements.id is null;
+-- delete `announcement_prices` from announcement_prices left join announcements on announcements.id = announcement_prices.announcement_id where announcements.id is null;
+-- delete `announcement_unavailabilities` from announcement_unavailabilities left join announcements on announcements.id = announcement_unavailabilities.announcement_id where announcements.id is null;
+-- delete `announcement_prices` from announcement_prices left join announcements on announcements.id = announcement_prices.announcement_id where announcements.id is null;
+-- delete `carrousels` from carrousels left join announcements on announcements.id = carrousels.announce_id where announcements.id is null;
+-- delete from `feedback_requests` where user_owner_id > 10 or user_subscriber_id > 10 or user_author_id > 10;
+-- delete FROM `profiles` WHERE user_id > 10;
+-- delete FROM `profiles_pro` WHERE user_id > 10;
+-- update `users` set username=concat('user',id),  mail = concat('user',id,'@tipkin.fr'), password='secret' where id !=1;

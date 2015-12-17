@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions>
+  <!-- App Root url (used in emails)-->
+  <define var="app-url" value="http://mysite.org/"/>
+  <!-- Admin user email for notifications -->
+  <define var="admin-email" value="admin@mysite.org"/>
+  <!-- name of email sender -->
+  <define var="sender-email-name" value="L'équipe TIPKIN"/>
+  <!-- (optional) email sender, if not provided, admin email will be used -->
+  <define var="sender-email" value="no-reply@mysite.org"/>
+  <!-- (optional) email address to reply to -->
+  <define var="replyto-email" value="support@mysite.org"/>
+
+  <define var="maintenance-mode" value="off"/>
+  <!-- If you want users to pay a fee to the platform when borrowing a thing, choose an non zero value here -->
+  <define var="platform-fee-ratio" value="0"/>
+
+  <!-- Values below are used in the legals page -->
+  <define var="company-information" value="Association Sol&amp;TIC – 36 rue Bernard Mulé, 31500 TOULOUSE" />
+  <define var="cnil-number" value="123345" />
+  <define var="company-identification-number" value="COMPANY_12345" />
+  <define var="company-hosting" value="Sol&amp;TIC utilise des serveurs dédiés loués auprès d'OVH" />
+  <define var="hosting-platform" value="Awesome Hosting Platform" />
+  
+  <!-- A secret key for this application deployment, used for crypt password -->
+  <define var="secret-key" value="mysecretkey" />
+  
+  <!-- dev config -->
+  <!-- force send mail to delivery-email if not null -->
+  <define var="delivery-email" value=""/>
+</definitions>

@@ -1,0 +1,30 @@
+.pagination {
+        }
+        
+.pagination a {
+    text-decoration: none;
+	color: #999999;
+    font-weight: bold;
+}
+
+.pagination a:HOVER {
+    text-decoration: underline;
+}
+
+.pagination a, .pagination span {
+    display: block;
+    float: left;
+    padding: 0.3em 0.3em;
+	margin-bottom: 5px;
+	min-width:1em;
+	text-align:center;
+}
+
+.pagination .current {
+    color: #0098A3;
+    font-weight: bold;
+}
+
+.pagination .current.prev, .pagination .current.next{
+	display: none;
+}

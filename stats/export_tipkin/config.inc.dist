@@ -1,0 +1,8 @@
+<?php
+
+$host='localhost'; // database host
+$dbname='dbname';  // database name
+$username='username';  // database user
+$password='password';  // database password
+
+?>

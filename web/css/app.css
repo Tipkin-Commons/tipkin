@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+img.avatar{background: white; border: solid 1px #DDDDDD;}
+input, textarea{width: 100%; margin-bottom: 25px;}
+select {margin-bottom: 25px;}
+label {width: 100%}
+label.error {margin-bottom: 12px; margin-top:-25px; width: auto;}
+
+.inline {width: auto;}
+
+.v-card {width: 100px;}
+.v-card img {max-height: 100px; max-width: 100px; margin: auto;}
+
+div.ui-datepicker {font-size:15px:}
+
+button.red, a.btn.red, a.button.red, input.red[type="submit"], input.red[type="reset"], input.red[type="button"] {
+    background: -moz-linear-gradient(center top , #E53C16 0%, #CF0404 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #B21203 !important;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 #B21203;
+}

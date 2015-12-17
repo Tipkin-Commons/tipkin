@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+	<route url="/admin/" module="connexion" action="index"/>
+	<route url="/admin/disconnect" module="connexion" action="disconnect"/>
+	
+	<route url="/admin/users" module="users" action="index"/>
+	<route url="/admin/users/add-member" module="users" action="addMember"/>
+	<route url="/admin/users/add-member-pro" module="users" action="addMemberPro"/>
+	<route url="/admin/users/add-admin" module="users" action="addAdmin"/>
+	<route url="/admin/users/promote/([0-9]+)" module="users" action="promote" vars="userId"/>
+	<route url="/admin/users/revoque/([0-9]+)" module="users" action="revoque" vars="userId"/>
+	<route url="/admin/users/delete/([0-9]+)" module="users" action="delete" vars="userId"/>
+	<route url="/admin/users/disable/([0-9]+)" module="users" action="disable" vars="userId"/>
+	<route url="/admin/users/enable/([0-9]+)" module="users" action="enable" vars="userId"/>
+	
+	<route url="/admin/announcements" module="announcements" action="index"/>
+	<route url="/admin/announcements/preview/([0-9]+)" module="announcements" action="preview" vars="announceId"/>
+	<route url="/admin/announcements/validate/([0-9]+)" module="announcements" action="validate" vars="announceId"/>
+	<route url="/admin/announcements/refuse/([0-9]+)" module="announcements" action="refuse" vars="announceId"/>
+	<route url="/admin/announcements/modification-preview/([0-9]+)" module="announcements" action="modificationPreview" vars="announceId"/>
+	<route url="/admin/announcements/modification-validate/([0-9]+)" module="announcements" action="modificationValidate" vars="announceId"/>
+	<route url="/admin/announcements/modification-refuse/([0-9]+)" module="announcements" action="modificationRefuse" vars="announceId"/>
+	
+	<route url="/admin/categories" module="categories" action="index"/>
+	<route url="/admin/categories/add/([a-z-]+)" module="categories" action="add" vars="categoryType"/>
+	<route url="/admin/categories/edit/([0-9]+)" module="categories" action="edit" vars="categoryId"/>
+	<route url="/admin/categories/delete/([0-9]+)" module="categories" action="delete" vars="categoryId"/>
+	
+	<route url="/admin/moderate" 							module="moderate" action="index"/>
+	<route url="/admin/moderate/announce/delete/([0-9]+)" 	module="moderate" action="deleteModerateAnnounce" vars="moderateId"/>
+	<route url="/admin/moderate/feedback/delete/([0-9]+)" 	module="moderate" action="deleteModerateFeedback" vars="moderateId"/>
+	<route url="/admin/feedback/delete/([0-9]+)" 			module="moderate" action="deleteFeedback" vars="feedbackId"/>
+	
+	<route url="/admin/opinion" 					module="opinion" action="index" />
+	<route url="/admin/opinion/delete/([0-9]+)" 	module="opinion" action="delete" vars="opinionId"/>
+	<route url="/admin/opinion/publish/([0-9]+)" 	module="opinion" action="publish" vars="opinionId"/>
+	
+	<route url="/admin/carrousel/add/([0-9]+)" 	module="carrousel" action="add" vars="announceId"/>
+	<route url="/admin/carrousel/delete/([0-9]+)" 	module="carrousel" action="delete" vars="carrouselId"/>
+	
+	<route url="/admin/history" 	module="history" action="index"/>
+	<route url="/admin/history/proceed-reservation/([0-9]+)" 	module="history" action="proceed" vars="reservationId"/>
+	<route url="/admin/history/cancel-reservation/([0-9]+)" 	module="history" action="cancel" vars="reservationId"/>
+</routes>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+	<route url="/" 			module="static" action="index"/>
+	<route url="/faq" 		module="static" action="faq"/>
+	<route url="/legals" 	module="static" action="legals"/>
+	<route url="/contact" 	module="static" action="contact"/>
+	<route url="/opinion" 	module="static" action="opinion"/>
+	<route url="/how-it-work" 	module="static" action="howItWork"/>
+	
+	<route url="/search/page=([0-9]*)/region=([a-z0-9]*)/department=([a-z0-9]*)/category=([a-z0-9]*)/subcategory=([a-zA-Z0-9]*)/zipcode=([a-zA-Z0-9]*)/filter=(.*$)" 
+		   module="search" action="index" 	vars="page,regionId,departmentId,categoryId,subCategoryId,zipCode,filter" />
+	<route url="/search/page=([0-9]*)/region=([a-z0-9]*)/department=([a-z0-9]*)/category=([a-z0-9]*)/subcategory=([a-zA-Z0-9]*)/zipcode=([a-zA-Z0-9]*)/community=([0-9]*)/filter=(.*$)" 
+		   module="search" action="index" 	vars="page,regionId,departmentId,categoryId,subCategoryId,zipCode,community,filter" />
+
+	<route url="/login" 			module="connexion" action="index"/>
+	<route url="/registration" 		module="connexion" action="registration"/>
+	<route url="/recover-password" 	module="connexion" action="recoverPassword"/>
+	<route url="/disconnect" 		module="connexion" action="disconnect"/>
+	<route url="/facebook-connect" 	module="connexion" action="facebookConnect"/>
+	<route url="/popup-connect/return-url=([a-z0-9-\/]*)" 	
+									module="connexion" action="popupConnect"	vars="returnUrl"/>
+	<route url="/valid-email/([0-9]+)/([0-9]+)" 
+									module="connexion" action="validEmail" 		vars="id,activationKey"/>
+	<route url="/username-exists/([A-Za-z0-9._%-]+)"	
+									module="connexion" action="usernameExists"	vars="username"/>									
+	
+	<route url="/view/member/announce-([0-9]+)" 	module="viewads" action="member" 	vars="announceId"/>
+	<route url="/view/member/announce-([0-9]+)/([a-z0-9-\/\-]*)" 	module="viewads" action="member" 	vars="announceId,smartUrl"/>
+	<route url="/view/pro/announce-([0-9]+)" 	module="viewads" action="pro" 		vars="announceId"/>
+	
+	<route url="/users/member/([0-9]+)" 			module="viewusers" action="member" 		vars="userId"/>
+	<route url="/users/member/([0-9]+)/addContact" 	module="viewusers" action="addContact" 	vars="userId"/>
+	<route url="/users/pro/([0-9]+)" 				module="viewusers" action="pro" 		vars="userId"/>
+	
+	<route url="/contacts[/]*([wait|tippeurs|friends|family|neighbors]*)" 
+																module="contacts" action="index" 	vars="contactGroup"/>
+	<route url="/contacts/add/([0-9]+)" 	module="contacts" action="add" 		vars="userId"/>
+	<route url="/contacts/accept/([0-9]+)" 	module="contacts" action="accept" 	vars="contactRequestId"/>
+	<route url="/contacts/refuse/([0-9]+)" 	module="contacts" action="refuse" 	vars="contactRequestId"/>
+	<route url="/contacts/delete/([0-9]+)" 	module="contacts" action="delete" 	vars="contactId"/>
+	
+	<route url="/activities/reservations" 			module="activities" action="reservations" 	/>
+	<route url="/activities/reservations/new" 		module="activities" action="reservationNew" 	/>
+	<route url="/activities/reservations/landing" 	module="activities" action="reservationLanding" 	/>
+	<route url="/reservations/valid/([0-9]+)/([0-9]+)" 		module="activities" action="reservationLandingValid" vars="reservationId,keyCheck"	/>
+	<route url="/reservations/cancel/([0-9]+)/([0-9]+)" 	module="activities" action="reservationLandingCancel" vars="reservationId,keyCheck"	/>
+	<route url="/reservations/rebound/([0-9]+)" 			module="activities" action="reservationRebound" vars="reservationId"	/>
+	<route url="/activities/locations"	 					module="activities" action="locations" 	/>
+	<route url="/activities/reservations/delete/([0-9]+)" 	module="activities" action="deleteReservation" vars="reservationId"	/>
+	<route url="/activities/reservation-exists" 			module="activities" action="reservationExists" 	/>
+	
+	<route url="/profile" 						module="profile" action="index" 			/>
+	<route url="/profile/create" 				module="profile" action="create" 			/>
+	<route url="/profile/edit" 					module="profile" action="edit" 				/>
+	<route url="/profile/photo" 				module="profile" action="avatar" 			/>
+	<route url="/profile/update-password" 		module="profile" action="updatePassword" 	/>
+	<route url="/profile/update-mail" 			module="profile" action="updateMail" 		/>
+	<route url="/profile/update-mailing" 		module="profile" action="updateMailing" 		/>
+	<route url="/profile/valid-email" 			module="profile" action="validEmail" 		/>
+	<route url="/profile/delete" 				module="profile" action="delete" 			/>
+	<route url="/profile/alternate-currency" 	module="profile" action="manageAlternateCurrencies" 	/>
+	
+	<route url="/invite" 						module="invite"   action="index" 	vars="userId"/>
+	<route url="/invite/send" 					module="invite"   action="send" 	vars="userId"/>
+	
+	<route url="/profile-pro" 					module="profilepro" action="index" 				/>
+	<route url="/profile-pro/create" 			module="profilepro" action="create" 			/>
+	<route url="/profile-pro/edit" 				module="profilepro" action="edit" 				/>
+	<route url="/profile-pro/photo" 			module="profilepro" action="avatar" 			/>
+	<route url="/profile-pro/update-password" 	module="profilepro" action="updatePassword" 	/>
+	<route url="/profile-pro/update-mail" 		module="profilepro" action="updateMail" 		/>
+	<route url="/profile-pro/valid-email" 		module="profilepro" action="validEmail" 		/>
+	<route url="/profile-pro/delete" 			module="profilepro" action="delete" 			/>
+	
+	<route url="/addresses" 					module="addresses" action="index" 	/>
+	<route url="/addresses/new" 				module="addresses" action="add" 	/>
+	<route url="/addresses/edit/([0-9]*)" 		module="addresses" action="edit" 	vars="addressId"/>
+	<route url="/addresses/delete/([0-9]*)" 	module="addresses" action="delete" 	vars="addressId"/>
+	
+	<route url="/announcements-pro[/]*([drafts|validated|archived]*)" 
+														module="announcementspro" action="index" 		vars="state"/>
+	<route url="/announcements-pro/new" 				module="announcementspro" action="new" 			/>
+	<route url="/announcements-pro/edit/([0-9]+)" 		module="announcementspro" action="edit" 		vars="announceId"/>
+	<route url="/announcements-pro/delete/([0-9]+)" 	module="announcementspro" action="delete" 		vars="announceId"/>
+	<route url="/announcements-pro/publish/([0-9]+)" 	module="announcementspro" action="publish" 		vars="announceId"/>
+	<route url="/announcements-pro/unpublish/([0-9]+)" 	module="announcementspro" action="unpublish" 	vars="announceId"/>
+	<route url="/announcements-pro/preview/([0-9]+)" 	module="announcementspro" action="preview" 		vars="announceId"/>
+	<route url="/announcements-pro/archive/([0-9]+)" 	module="announcementspro" action="archive" 		vars="announceId"/>
+	<route url="/announcements-pro/unarchive/([0-9]+)" 	module="announcementspro" action="unarchive" 	vars="announceId"/>
+	
+	<route url="/announcements[/]*([drafts|validated|archived|pending|refused]*)" 
+														module="announcements" action="index" 				vars="state"/>
+	<route url="/announcements/new" 					module="announcements" action="new" 				/>
+	<route url="/announcements/edit/photo/([0-9]+)"		module="announcements" action="editPhoto"			vars="announceId"/>
+	<route url="/announcements/edit/prices/([0-9]+)"	module="announcements" action="editPrices"			vars="announceId"/>
+	<route url="/announcements/edit/calendar/([0-9]+)"	module="announcements" action="editCalendar"		vars="announceId"/>
+	<route url="/announcements/edit/indisponibilities/([0-9]+)"	
+														module="announcements" action="editIndisponibilities"		vars="announceId"/>
+	<route url="/announcements/edit/([0-9]+)" 			module="announcements" action="edit" 				vars="announceId"/>
+	<route url="/announcements/delete/([0-9]+)" 		module="announcements" action="delete" 				vars="announceId"/>
+
+	<route url="/announcements/unarchive/([0-9]+)" 		module="announcements" action="unarchive" 			vars="announceId"/>
+	<route url="/announcements/unarchive/indisponibilities/([0-9]+)" 		
+														module="announcements" action="unarchiveIndisponibilities" 			vars="announceId"/>
+	<route url="/announcements/admin-comment/([0-9]+)" 	module="announcements" action="readAdminComment" 	vars="announceId"/>
+	
+	<route url="/feedback" 						module="feedback" action="index" />
+	<route url="/feedback/read/([0-9]+)"		module="feedback" action="feedback" vars="feedbackId"/>
+	<route url="/feedback/([0-9]+)" 			module="feedback" action="leave" 	vars="feedbackRequestId" />
+	<route url="/feedback/user/([0-9]+)" 		module="feedback" action="userList" vars="userId" />
+	<route url="/feedback/announce/([0-9]+)" 	module="feedback" action="announceList" vars="announceId" />
+	
+	<route url="/paiement/([0-9]+)" 	module="paiement" action="index" vars="reservationId"/>
+	<route url="/paiement/ok" 			module="paiement" action="ok" />
+	<route url="/paiement/error" 		module="paiement" action="error" />
+	<route url="/paiement/back" 		module="paiement" action="back" />
+	<route url="/paiement/test" 		module="paiement" action="test" />
+	
+	<route url="/moderate/announce/([0-9]+)" 	module="moderate" action="announce" vars="announceId" />
+	<route url="/moderate/feedback/([0-9]+)" 	module="moderate" action="feedback" vars="feedbackId" />
+</routes>

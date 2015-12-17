@@ -1,0 +1,7 @@
+<?php
+global $tipkin_host, $tipkin_dbname, $tipkin_username, $tipkin_password, $tipkin_prefix;
+$tipkin_host='localhost';
+$tipkin_dbname='tipkin_website';
+$tipkin_username='root';
+$tipkin_password='root';
+$tipkin_prefix='';

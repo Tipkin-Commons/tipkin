@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# RewriteCond %{HTTP_HOST} ![tipkin.fr]$
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^users(.*)$ http://www.tipkin.fr/users$1 [QSA,L]
+# RewriteRule ^announcements(.*)$ http://www.tipkin.fr/announcements$1 [QSA,L]
+# RewriteRule ^announcements-pro(.*)$ http://www.tipkin.fr/announcements-pro$1 [QSA,L]
+
+RewriteRule ^admin/ backend.php [QSA,L]
+RewriteRule ^cron/ cron.php [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /frontend.php [QSA,L]

@@ -13,3 +13,4 @@ config.inc
 .buildpath
 .project
 config/app.xml
+app.xml
