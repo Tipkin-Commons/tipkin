@@ -2,6 +2,8 @@
 
 Welcome to the tipkin source code.
 
+Please follow the projet here : https://projet.soletic.org/projects/tipkin/wiki/Wiki
+
 ## What is Tipkin ?
 
 ### Install
