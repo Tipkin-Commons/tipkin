@@ -1,0 +1,15 @@
+config.inc
+/stats/*.*
+/web/.htaccess
+/web/users/
+/web/templates_c/
+/web/announcements*/
+/apps/*.config.php
+*~
+*.swp
+.DS_Store
+.Thumbs
+.settings
+.buildpath
+.project
+config/app.xml
